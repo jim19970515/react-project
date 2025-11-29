@@ -1,6 +1,5 @@
 import { useState, Suspense } from "react";
-import { RouterProvider } from "react-router-dom";
-import router from "./router";
+import { Outlet } from "react-router-dom";
 
 // components
 //header
@@ -10,15 +9,15 @@ import { Map } from "./components/map";
 function App() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <header>
-          <NavBar />
-        </header>
-        <main>
-          <RouterProvider router={router} />
-        </main>
-        <footer></footer>
-      </Suspense>
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
+      </main>
+      <footer></footer>
     </>
   );
 }
