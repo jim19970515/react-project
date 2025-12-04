@@ -19,9 +19,8 @@ export function SwiperComponent() {
         disableOnInteraction: false,
         pauseOnMouseEnter: true
       }}
-      spaceBetween={50}
       slidesPerView={1}
-      style={{ height: "400px", width: "100%" }}
+      style={{ width: "100%" }}
     >
       <SwiperSlide>
         <img src="/src/assets/img/banner.png" alt="" />
