@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { useState, Suspense } from "react";
+import { Outlet, NavLink } from "react-router-dom";
+import { TfiAlignLeft } from "react-icons/tfi";
+// components
+//header
+import { NavBar } from "./components/navBar";
+import { Map } from "./components/map";
+import { SwiperComponent } from "./components/swiper";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        <div className="flex justify-between items-center p-2">
+          <img className="h-12" src="/src/assets/img/logo.png" alt="logo" />
+          <div className="flex items-center gap-4 text-xl text-[#525151]">
+            <NavLink>繁中</NavLink>
+            <NavLink>EN</NavLink>
+            <TfiAlignLeft className="text-3xl ml-4" />
+          </div>
+        </div>
+        <NavBar />
+        <SwiperComponent />
+      </header>
+      <main>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
+      </main>
+      <footer>
+        <div className="fixed bottom-0.5  p-2  text-white ">
+          <div className="flex items-center gap-4 bg-[#A12245] rounded-full px-4 py-3">
+            <NavLink>
+              <button>AI客服</button>
+            </NavLink>
+            <NavLink>
+              <button>預約</button>
+            </NavLink>
+            <NavLink>
+              <button>加入會員</button>
+            </NavLink>
+          </div>
+        </div>
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
