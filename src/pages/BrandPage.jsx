@@ -1,10 +1,13 @@
 //品牌頁面
+// images
+import logoImg from "../assets/img/logo.png";
+
 export default function BrandPage() {
   return (
     <div className="w-full">
       <div className="w-full h-40 bg-[#A12245]/80 flex justify-center items-center">
         <img
-          src="/src/assets/img/logo.png"
+          src={logoImg}
           alt="room"
           className="px-2 h-16 py-2 object-contain bg-white rounded-lg shadow-md shadow-[#ef98b1]"
         />

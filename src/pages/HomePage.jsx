@@ -12,6 +12,9 @@ dayjs.extend(customParseFormat);
 dayjs.extend(localeData);
 dayjs.extend(weekday);
 
+// images
+import newMessageImg from "../assets/img/new-message.png";
+
 const adultOptions = [
   {
     value: 1
@@ -65,7 +68,7 @@ export default function HomePage() {
       <div className="w-full">
         <h2 className="text-2xl font-bold w-fit px-2 mx-auto bg-white text-[#A12245] rounded-lg">最新消息</h2>
         <div className="flex justify-center items-center w-full mt-4 px-4 shadow-lg">
-          <img src="/src/assets/img/new-message.png" alt="news" className="w-full object-contain  py-4" />
+          <img src={newMessageImg} alt="news" className="w-full object-contain rounded-2xl py-4" />
         </div>
       </div>
     </div>

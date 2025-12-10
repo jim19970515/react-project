@@ -11,6 +11,9 @@ import { SplashScreen } from "./components/SplashScreen";
 import { TfiThemifyFavicon, TfiMapAlt } from "react-icons/tfi";
 import { GiBed } from "react-icons/gi";
 
+// images
+import logoImg from "./assets/img/logo.png";
+
 function App() {
   const [sideBar, setSideBar] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +29,7 @@ function App() {
       <div className="min-h-screen bg-[#ffd6e2]">
         <header className="sticky top-0 z-10 bg-[#ffd6e2]">
           <div className="flex justify-between items-center p-2">
-            <img className="h-12" src="/src/assets/img/logo.png" alt="logo" />
+            <img className="h-12" src={logoImg} alt="logo" />
             <div className="flex items-center gap-4 text-xl text-[#525151]">
               <NavLink>繁中</NavLink>
               <NavLink>EN</NavLink>
