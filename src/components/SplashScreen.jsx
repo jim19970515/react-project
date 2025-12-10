@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import logoImg from "../assets/img/logo.png";
 /**
  * 品牌載入動畫組件
  * 1. Logo 淡入 + 縮放動畫
@@ -63,7 +63,7 @@ export function SplashScreen({ onLoaded }) {
             animation: isFading ? "none" : "fadeInScale 0.7s ease-out"
           }}
         >
-          <img src="/src/assets/img/logo.png" alt="Logo" className="h-24 w-auto mb-8" />
+          <img src={logoImg} alt="Logo" className="h-24 w-auto mb-8" />
         </div>
 
         {/* 載入指示器 - 三個圓點動畫 */}

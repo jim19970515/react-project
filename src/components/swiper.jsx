@@ -8,6 +8,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+// images
+import bannerImg from "../assets/img/banner.png";
+import banner2Img from "../assets/img/banner2.png";
+import banner3Img from "../assets/img/banner3.png";
+import banner4Img from "../assets/img/banner4.png";
+
 export function SwiperComponent() {
   return (
     <Swiper
@@ -23,16 +29,16 @@ export function SwiperComponent() {
       style={{ width: "100%" }}
     >
       <SwiperSlide>
-        <img src="/src/assets/img/banner.png" alt="" />
+        <img src={bannerImg} alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="/src/assets/img/banner2.png" alt="" />
+        <img src={banner2Img} alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="/src/assets/img/banner3.png" alt="" />
+        <img src={banner3Img} alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="/src/assets/img/banner4.png" alt="" />
+        <img src={banner4Img} alt="" />
       </SwiperSlide>
     </Swiper>
   );
