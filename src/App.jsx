@@ -10,9 +10,10 @@ import { SplashScreen } from "./components/SplashScreen";
 //icon
 import { TfiThemifyFavicon, TfiMapAlt } from "react-icons/tfi";
 import { GiBed } from "react-icons/gi";
-
 // images
 import logoImg from "./assets/img/logo.png";
+//libs
+import Ga4RouteListener from "./libs/Ga4RouteListener";
 
 function App() {
   const [sideBar, setSideBar] = useState(false);
@@ -23,8 +24,10 @@ function App() {
   const handleLoaded = () => {
     setIsLoading(!isLoading);
   };
+
   return (
     <>
+      <Ga4RouteListener />
       <SplashScreen onLoaded={() => handleLoaded()} />
       <div className="min-h-screen bg-[#ffd6e2]">
         <header className="sticky top-0 z-10 bg-[#ffd6e2]">
