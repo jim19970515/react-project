@@ -10,7 +10,7 @@ dayjs.extend(weekday);
 import { Col, Row } from "antd";
 import { DatePicker, Select, Button, Form } from "antd";
 //libs
-import { trackGa4Event } from "../libs/analytics";
+// import { trackGa4Event } from "../libs/analytics";
 const adultOptions = [
   {
     label: "1人",
@@ -41,7 +41,7 @@ const childOptions = [
 ];
 export function RoomForm() {
   const roomSearch = () => {
-    trackGa4Event("room_search", {});
+    // trackGa4Event("room_search", {});
   };
   const today = dayjs();
   const tomorrow = dayjs().add(1, "day");

@@ -13,7 +13,7 @@ import { GiBed } from "react-icons/gi";
 // images
 import logoImg from "./assets/img/logo.png";
 //libs
-import Ga4RouteListener from "./libs/Ga4RouteListener";
+// import Ga4RouteListener from "./libs/Ga4RouteListener";
 
 function App() {
   const [sideBar, setSideBar] = useState(false);
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <Ga4RouteListener />
+      // <Ga4RouteListener />
       <SplashScreen onLoaded={() => handleLoaded()} />
       <div className="min-h-screen bg-[#ffd6e2]">
         <header className="sticky top-0 z-10 bg-[#ffd6e2]">
@@ -80,7 +80,7 @@ function App() {
           </div>
         </div>
         <div
-          className=" absolute top-0 left-0backdrop-blur-sm h-screen w-screen bg-black/50 z-10"
+          className=" absolute top-0 left-0 backdrop-blur-sm h-screen w-screen bg-black/50 z-10"
           onClick={toggleSideBar}
           style={{ display: sideBar ? "block" : "none" }}
         >
