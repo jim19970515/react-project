@@ -7,10 +7,10 @@ import router from "./router";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 
-// analytics
-import { initGA4 } from "./libs/analytics";
-// 初始化 GA4
-initGA4();
+// // analytics
+// import { initGA4 } from "./libs/analytics";
+// // 初始化 GA4
+// initGA4();
 
 const app = createRoot(document.getElementById("root"));
 app.render(
