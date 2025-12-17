@@ -27,7 +27,6 @@ function App() {
 
   return (
     <>
-      // <Ga4RouteListener />
       <SplashScreen onLoaded={() => handleLoaded()} />
       <div className="min-h-screen bg-[#ffd6e2]">
         <header className="sticky top-0 z-10 bg-[#ffd6e2]">
