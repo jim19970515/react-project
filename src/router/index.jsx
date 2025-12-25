@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 //react router 資料模式
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, useLocation } from "react-router-dom";
 import App from "../App";
 import HomePage from "../pages/HomePage";
 import RoomPage from "../pages/RoomPage";
@@ -36,30 +37,30 @@ const router = createBrowserRouter([
         lazy: async () => {
           const module = await import("../pages/RoomPage");
           return { Component: module.default };
-        }
+        },
       },
       {
         path: "services",
         lazy: async () => {
           const module = await import("../pages/ServicesPage");
           return { Component: module.default };
-        }
+        },
       },
       {
         path: "brand",
         lazy: async () => {
           const module = await import("../pages/BrandPage");
           return { Component: module.default };
-        }
+        },
       },
       {
         path: "contact",
         lazy: async () => {
           const module = await import("../pages/ContactPage");
           return { Component: module.default };
-        }
-      }
-    ]
-  }
+        },
+      },
+    ],
+  },
 ]);
 export default router;

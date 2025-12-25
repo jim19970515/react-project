@@ -60,7 +60,7 @@ export function SplashScreen({ onLoaded }) {
             isFading ? "scale-95 opacity-0" : "scale-100 opacity-100"
           }`}
           style={{
-            animation: isFading ? "none" : "fadeInScale 0.7s ease-out"
+            animation: isFading ? "none" : "fadeInScale 0.7s ease-out",
           }}
         >
           <img src={logoImg} alt="Logo" className="h-24 w-auto mb-8" />
@@ -71,22 +71,28 @@ export function SplashScreen({ onLoaded }) {
           <div
             className="w-2 h-2 rounded-full bg-[#A12245]"
             style={{
-              animation: isFading ? "none" : "bounce 1.4s infinite",
-              animationDelay: "0s"
+              animationName: isFading ? "none" : "bounce",
+              animationDuration: "1.4s",
+              animationIterationCount: "infinite",
+              animationDelay: "0s",
             }}
           />
           <div
             className="w-2 h-2 rounded-full bg-[#A12245]"
             style={{
-              animation: isFading ? "none" : "bounce 1.4s infinite",
-              animationDelay: "0.2s"
+              animationName: isFading ? "none" : "bounce",
+              animationDuration: "1.4s",
+              animationIterationCount: "infinite",
+              animationDelay: "0.2s",
             }}
           />
           <div
             className="w-2 h-2 rounded-full bg-[#A12245]"
             style={{
-              animation: isFading ? "none" : "bounce 1.4s infinite",
-              animationDelay: "0.4s"
+              animationName: isFading ? "none" : "bounce",
+              animationDuration: "1.4s",
+              animationIterationCount: "infinite",
+              animationDelay: "0.4s",
             }}
           />
         </div>
