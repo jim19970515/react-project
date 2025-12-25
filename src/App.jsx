@@ -14,6 +14,7 @@ import { GiBed } from "react-icons/gi";
 import logoImg from "./assets/img/logo.png";
 //libs
 // import Ga4RouteListener from "./libs/Ga4RouteListener";
+import PageViewTracker from "./libs/gtm-tracker";
 
 function App() {
   const [sideBar, setSideBar] = useState(false);
@@ -42,6 +43,7 @@ function App() {
         </header>
         <main>
           <Suspense fallback={<div>Loading...</div>}>
+            <PageViewTracker />
             <Outlet />
           </Suspense>
         </main>
