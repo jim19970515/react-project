@@ -42,8 +42,8 @@ function App() {
           <NavBar />
         </header>
         <main>
+          <PageViewTracker />
           <Suspense fallback={<div>Loading...</div>}>
-            <PageViewTracker />
             <Outlet />
           </Suspense>
         </main>
